@@ -215,12 +215,24 @@ function embedded_phpinfo()
 	    <?php
 	        $list_ignore = array ('.','..','exemples');
 	        $handle=opendir(".");
+	        $dirs = array();
+	        $files = array();
 
 	        while ($file = readdir($handle)) {
 	            if (is_dir($file) && !in_array($file,$list_ignore)) {
-	                echo '<div><a href="'.$file.'"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVR4nGNgoBR8ahL8jw1/bBTooMiAT8Qa8gmPAUQZ8omAAbgwbQz4v0yPZMxANQO+dkuSbsBS3f1wA/7MVSPdgOX6DgwU2Q4LxD/k2g4CXymxHQQosn1QAACw4dH3zBtqmQAAAABJRU5ErkJggg=="> '.$file.'</a></div>';
+	                $dirs[] = '<div><a href="'.$file.'"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVR4nGNgoBR8ahL8jw1/bBTooMiAT8Qa8gmPAUQZ8omAAbgwbQz4v0yPZMxANQO+dkuSbsBS3f1wA/7MVSPdgOX6DgwU2Q4LxD/k2g4CXymxHQQosn1QAACw4dH3zBtqmQAAAABJRU5ErkJggg=="> '.$file.'</a></div>';
+	            }
+	            elseif (is_file($file) && !in_array($file,$list_ignore)) {
+	            	$files[] = '<div><a href="'.$file.'"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXElEQVR4nGNgoBaYcPJn6IRTP/9jwzPP//o/+czPTrINWH3z9/9jz/78n3z6ZxfZBjz8+g+/IRPwGLDwyi+wZhAGGdZ/8rs7SQZMQMcnf4aOGvBzNAxO0iIMyAUAVbQKcChEl+IAAAAASUVORK5CYII="> '.$file.'</a></div>';
 	            }
 	        }
+	        foreach ($dirs as $dir) {
+	        	echo $dir;
+	        }
+	        foreach ($files as $file) {
+	        	echo $file;
+	        }
+
 	        closedir($handle);
 	    ?>
 		</div>
