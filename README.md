@@ -10,6 +10,6 @@ PHPinfo is displayed when you click on the PHP icon.
 Phpmyadmin can be linked to the Mysql icon.
 
 ## install
-Just copy the index.php at the root of your server
+Just copy the index.php at the root of your server or in a directory
 
 ![image](https://github.com/uprisingweb/webserver-index/assets/39047087/2cabca6d-2956-4e29-8184-62390c1b0ec2)
