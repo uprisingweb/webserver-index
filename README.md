@@ -1,13 +1,13 @@
 # webserver-index
 Index.php which lists all directories at the root of the server.
 
-Can be usefull for a developpement webserver.
+Can be useful for developing a web server.
 
-Colors can be usely modified in the css code of page.
+Colors can be easily changed in the CSS code of the page. (:root{...})
 
-Phpinfo in displayed when you click on the PHP icon.
+PHPinfo is displayed when you click on the PHP icon.
 
-Phpmyadmin can be linked on the Mysql icon.
+Phpmyadmin can be linked to the Mysql icon.
 
 ## install
 Just copy the index.php at the root of your server
