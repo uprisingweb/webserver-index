@@ -1,5 +1,5 @@
 # webserver-index
-Index.php which lists all directories and files at the root of the server like easyphp ou wamp do.
+Index.php which lists all directories and files at the root of the server like easyphp or wamp do.
 
 Can be useful for developing a web server.
 
